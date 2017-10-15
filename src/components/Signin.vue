@@ -14,6 +14,7 @@
 <script>
   import md5 from 'blueimp-md5'
   import {getBrowser} from '@/utils/utils.js'
+  import {loginValidateUser} from '@/service/getData.js'
   export default {
     data () {
       return {
@@ -36,7 +37,7 @@
           pwd: md5(this.pwd, this.account),
           b_id: getBrowser().join()
         }
-        return this.$http.post('/api/user/login_validate_user', data)
+        return loginValidateUser(data)
       },
       login () {
         let validateResult = this.validateUser()

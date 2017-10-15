@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import {getLoginStatus} from '@/utils/utils.js'
+// import {getLoginStatus} from '@/utils/utils.js'
 const Login = resolve => require(['@/page/Login.vue'], resolve)
 const Signup = resolve => require(['@/components/Signup.vue'], resolve)
 const Signin = resolve => require(['@/components/Signin.vue'], resolve)
@@ -23,16 +23,16 @@ const router = new Router({
       alias: '',
       component: Login,
       // 免登录
-      beforeEnter: (to, from, next) => {
-        getLoginStatus().then(response => {
-          let resData = response.data
-          if (resData.result) {
-            next('/index')
-          } else {
-            next()
-          }
-        })
-      },
+      // beforeEnter: (to, from, next) => {
+      //   getLoginStatus().then(response => {
+      //     let resData = response.data
+      //     if (resData.result) {
+      //       next('/index')
+      //     } else {
+      //       next()
+      //     }
+      //   })
+      // },
       children: [{
         path: 'signup',
         name: 'Signup',
