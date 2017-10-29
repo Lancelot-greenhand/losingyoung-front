@@ -22,3 +22,5 @@ export const getImageItem = params => axios.get('/api/image/get_image_item', {
 })
 
 export const loginValidateUser = params => axios.get('/api/user/login_validate_user', params)
+
+export const getSpiderCarData = params => axios.get('/spider/get_all_car_data', params)

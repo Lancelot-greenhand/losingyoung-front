@@ -13,6 +13,9 @@ const ArticleManage = resolve => require(['@/page/admin/article.vue'], resolve)
 const Photos = resolve => require(['@/page/photos.vue'], resolve)
 const PhotoList = resolve => require(['@/components/photoList.vue'], resolve)
 const PhotoGallery = resolve => require(['@/components/photoGallery.vue'], resolve)
+// 爬虫
+const SpiderData = resolve => require(['@/page/spider-data'], resolve)
+const SpiderCar = resolve => require(['@/page/spider-data/car.vue'], resolve)
 
 Vue.use(Router)
 const router = new Router({
@@ -84,6 +87,15 @@ const router = new Router({
       path: '/admin/article',
       name: 'articleManagement',
       component: ArticleManage
+    }, {
+      path: '/spider-data',
+      name: 'spiderData',
+      component: SpiderData,
+      children: [{
+        path: 'car',
+        name: 'spiderDataCar',
+        component: SpiderCar
+      }]
     }, {
       path: '*',
       component: notFound
