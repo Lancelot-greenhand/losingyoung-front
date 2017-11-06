@@ -1,0 +1,2 @@
+webpackJsonp([12],{"2h0Q":function(e,t,n){"use strict";var r=function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",[n("router-link",{attrs:{to:"/admin/article"}},[e._v("文章管理")])],1)},a=[],u={render:r,staticRenderFns:a};t.a=u},"4RTS":function(e,t,n){"use strict";t.a={}},CU7m:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r=n("4RTS"),a=n("2h0Q"),u=n("o7Pn"),i=u(r.a,a.a,null,null,null);t.default=i.exports}});
+//# sourceMappingURL=12.a695df40dec747022280.js.map

@@ -1,0 +1,2 @@
+webpackJsonp([11],{"3GOy":function(e,t,n){"use strict";t.a={data:function(){return{}}}},VPKs:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r=n("3GOy"),u=n("Yb7M"),a=n("o7Pn"),s=a(r.a,u.a,null,null,null);t.default=s.exports},Yb7M:function(e,t,n){"use strict";var r=function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",[n("router-view")],1)},u=[],a={render:r,staticRenderFns:u};t.a=a}});
+//# sourceMappingURL=11.e664549b4736a2878666.js.map
