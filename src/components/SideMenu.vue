@@ -24,17 +24,17 @@
           href: '',
           children: [{
             title: '你可能想要的福利',
-            href: '#/index/resources'
+            href: '/index/resources'
           }, {
             title: '啥？',
-            href: '#/index/bullshit'
+            href: '/index/bullshit'
           }]
         }, {
           title: '其乐融融',
           href: '',
           children: [{
             title: '我们',
-            href: '#/photos'
+            href: '/photos'
           }]
         }]
       }

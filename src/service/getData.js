@@ -21,6 +21,10 @@ export const getImageItem = params => axios.get('/api/image/get_image_item', {
   params
 })
 
-export const loginValidateUser = params => axios.get('/api/user/login_validate_user', params)
+export const loginValidateUser = params => axios.post('/api/user/login_validate_user', params)
 
 export const getSpiderCarData = params => axios.get('/api/spider/get_all_car_data', params)
+
+export const redirectGithub = params => axios.get('/api/oauth/redirect_github', params)
+
+export const getGithubInfo = params => axios.get('/api/oauth/get_github_info', params)

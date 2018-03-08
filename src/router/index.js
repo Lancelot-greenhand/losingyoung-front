@@ -19,6 +19,7 @@ const SpiderCar = resolve => require(['@/page/spider-data/car.vue'], resolve)
 
 Vue.use(Router)
 const router = new Router({
+  mode: 'history',
   routes: [
     {
       path: '/login',

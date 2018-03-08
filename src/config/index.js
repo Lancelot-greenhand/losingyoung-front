@@ -1,13 +1,5 @@
-const mode = 'prod'
-let baseUrl = ''
-switch (mode) {
-  case 'prod':
-    baseUrl = 'http://www.losingyoung.com/'
-    break
-  case 'dev':
-    baseUrl = 'http://localhost:3000/'
-    break
-}
+
+let baseUrl = process.env.NODE_ENV === 'production' ? 'http://www.losingyoung.com/' : 'http://localhost:3000/'
 
 export const config = {
   baseUrl
@@ -19,6 +11,6 @@ export const categoryName = {
 }
 
 export const categoryPath = {
-  bullshit: '#/index/bullshit',
-  resources: '#/index/resources'
+  bullshit: '/index/bullshit',
+  resources: '/index/resources'
 }

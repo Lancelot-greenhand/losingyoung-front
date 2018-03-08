@@ -8,7 +8,7 @@
   </div>
 </template>
 <script>
-  var photoListBase = '#/photos/list/'
+  var photoListBase = '/photos/list/'
   import {getImageList} from '@/service/getData.js'
   import {config} from '@/config/index.js'
   export default {
