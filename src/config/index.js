@@ -1,14 +1,5 @@
-const mode = 'dev'
-let baseUrl = ''
-switch (mode) {
-  case 'prod':
-    baseUrl = 'http://www.losingyoung.com/'
-    break
-  case 'dev':
-    baseUrl = 'http://localhost:3000/'
-    break
-}
 
+let baseUrl = process.env.baseUrl
 export const config = {
   baseUrl
 }
