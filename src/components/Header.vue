@@ -8,9 +8,9 @@
       </div>
       <el-menu :default-active='activeIndex' class="wide-nav-bar" mode="horizontal">
         <el-submenu index="1">
-          <template slot="title">没有分类</template>
-          <el-menu-item :index="routeIndex.resources"><router-link to='/index/resources'>你可能想要的福利资源</router-link></el-menu-item>
-          <el-menu-item :index="routeIndex.bullshit"><router-link to='/index/bullshit'>啥？</router-link></el-menu-item>
+          <template slot="title">分类</template>
+          <el-menu-item :index="routeIndex.resources"><router-link to='/index/resources'>技术</router-link></el-menu-item>
+          <el-menu-item :index="routeIndex.bullshit"><router-link to='/index/bullshit'>随笔</router-link></el-menu-item>
         </el-submenu>
         <el-submenu index="2">
           <template slot="title">其乐融融</template>

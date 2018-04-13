@@ -6,7 +6,7 @@ export const config = {
 
 export const categoryName = {
   bullshit: '随笔',
-  resources: '资源'
+  resources: '技术'
 }
 
 export const categoryPath = {

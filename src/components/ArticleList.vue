@@ -3,9 +3,9 @@
    <h1>{{category}}</h1>
    <hr/>
    <div v-for="(item, idx) in items" class="article-list-item" :key='idx'>
-     <h2><a :href="item.href">{{item.title}}</a></h2>
+     <h2><a  @click="goToArticle(item.href)">{{item.title}}</a></h2>
      <div class="article-brief-intro" v-html="item.brief_intro"></div>
-     <div><a class="article-read-full" :href="item.href">阅读全文</a></div>
+     <div><a class="article-read-full"  @click="goToArticle(item.href)">阅读全文</a></div>
      <div class="article-list-item-metadata">
        <span><i class='el-icon-date'></i>{{item.created_date | formatCreatedDate}}</span>
        <span><i class="fa fa-user"></i>{{item.author}}</span>
@@ -41,6 +41,9 @@
       }
     },
     methods: {
+      goToArticle(url) {
+        this.$router.push(url)
+      },
       renderArticleList () {
         let params = {
           category: this.$route.name

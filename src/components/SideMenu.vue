@@ -20,13 +20,13 @@
     data () {
       return {
         items: [{
-          title: '没有分类',
+          title: '分类',
           href: '',
           children: [{
-            title: '你可能想要的福利',
+            title: '技术',
             href: '/index/resources'
           }, {
-            title: '啥？',
+            title: '随笔',
             href: '/index/bullshit'
           }]
         }, {

@@ -1,7 +1,7 @@
 <template>
   <div>
     <span :class='{curItem: isCurItem}' class="l-breadcrumb-item">
-      <a :href="to" v-if='hasHref && !isCurItem'>
+      <a @click='goTo(to)' v-if='hasHref && !isCurItem'>
         <slot></slot>
       </a>
       <slot v-else></slot>
@@ -39,6 +39,11 @@
     },
     mounted () {
       this.separator = this.$parent.separator
+    },
+    methods: {
+      goTo(url) {
+        this.$router.push(url)
+      }
     }
   }
 </script>

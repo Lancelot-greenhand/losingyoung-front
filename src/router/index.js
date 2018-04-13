@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import {getLoginStatus} from '@/utils/utils.js'
+
 const Login = resolve => require(['@/page/Login.vue'], resolve)
 const Signup = resolve => require(['@/components/Signup.vue'], resolve)
 const Signin = resolve => require(['@/components/Signin.vue'], resolve)
@@ -103,8 +104,5 @@ const router = new Router({
     }
   ]
 })
-router.beforeEach((to, from, next) => {
-  window.scrollTo(0, 0)
-  next()
-})
+
 export default router

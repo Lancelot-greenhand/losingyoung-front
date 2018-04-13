@@ -6,7 +6,8 @@ Vue.use(Vuex)
 const state = {
   isLogin: false,
   userInfo: null,
-  activeNav: 'resources'
+  activeNav: 'resources',
+  loading:false
 }
 const mutations = {
   changeLoginStatus (state, isLogin) {
@@ -21,6 +22,12 @@ const mutations = {
   },
   changeActiveNav (state, activeNav) {
     state.activeNav = activeNav
+  },
+  showLoading (state) {
+    state.loading = true
+  },
+  closeLoading (state) {
+    state.loading = false
   }
 }
 const actions = {
