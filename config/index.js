@@ -34,6 +34,13 @@ module.exports = {
         pathRewrite: {
           '^/api': ''
         }
+      },
+        '/spider': {
+        target: 'http://localhost:3030',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/spider': ''
+        }
       }
     },
     // CSS Sourcemaps off by default because relative paths are "buggy"

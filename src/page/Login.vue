@@ -11,7 +11,12 @@
           </div>
           <div class="tab-body">
             <router-view></router-view>
-            <div class='login-no-name' @click='loginAsTourist'><a>游客登陆</a></div>
+            <div class='login-no-name' >
+              <a @click='loginAsTourist'>游客登陆</a>
+              <span class="other-logins">
+                <i class="fa fa-github" aria-hidden="true" @click='loginGithub'></i>
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -23,6 +28,7 @@
     Signin: 'Signin',
     Signup: 'Signup'
   }
+  // import {redirectGithub} from '@/service/getData.js'
   export default {
     data () {
       return {
@@ -48,6 +54,9 @@
       },
       loginAsTourist () {
         this.$router.push({path: '/index'})
+      },
+      loginGithub () {
+        location.replace('/api/oauth/redirect_github?callback=' + location.href)
       }
     },
     created () {
@@ -135,7 +144,13 @@
     padding: 0.7rem 0;
   }
   .login-no-name{
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     cursor: pointer;
+    position: relative;
+  }
+  .other-logins{
+    position: absolute;
+    right: 0;
+    font-size: 18px;
   }
 </style>

@@ -78,7 +78,7 @@
         return preview
       },
       href () {
-        let base = '#/index/article'
+        let base = '/index/article'
         let id = this.articleId
         return base + '/' + id
       },

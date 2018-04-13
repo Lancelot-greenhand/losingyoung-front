@@ -1,5 +1,5 @@
 
-let baseUrl = process.env.baseUrl
+let baseUrl = process.env.BASE_URL
 export const config = {
   baseUrl
 }
@@ -10,6 +10,6 @@ export const categoryName = {
 }
 
 export const categoryPath = {
-  bullshit: '#/index/bullshit',
-  resources: '#/index/resources'
+  bullshit: '/index/bullshit',
+  resources: '/index/resources'
 }

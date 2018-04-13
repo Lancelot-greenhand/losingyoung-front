@@ -29,7 +29,7 @@
       return {
         firstBreadItem: {
           title: '我们',
-          to: '#/photos',   // bread改成history api {path: '/ddd'}
+          to: '/photos',   // bread改成history api {path: '/ddd'}
           curItem: true
         },
         breadItems: []
@@ -56,7 +56,7 @@
         this.firstBreadItem.curItem = false
         this.breadItems.push({
           title: listId,
-          to: `#${path}`,
+          to: `${path}`,
           curItem: true
         })
       },
