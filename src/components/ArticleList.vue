@@ -2,7 +2,7 @@
 	<div>
    <h1>{{category}}</h1>
    <hr/>
-   <div v-for="item in items" class="article-list-item">
+   <div v-for="(item, idx) in items" class="article-list-item" :key='idx'>
      <h2><a :href="item.href">{{item.title}}</a></h2>
      <div class="article-brief-intro" v-html="item.brief_intro"></div>
      <div><a class="article-read-full" :href="item.href">阅读全文</a></div>
@@ -10,7 +10,7 @@
        <span><i class='el-icon-date'></i>{{item.created_date | formatCreatedDate}}</span>
        <span><i class="fa fa-user"></i>{{item.author}}</span>
        <span>
-         <span class='article-tag'v-for='tag in item.tagItems'>{{tag}}</span>
+         <span class='article-tag' v-for='(tag, tagIdx) in item.tagItems' :key='tagIdx'>{{tag}}</span>
        </span>
      </div>
    </div> 
@@ -18,9 +18,8 @@
 </template>
 <script>
   import {getArticleList} from '@/service/getData.js'
-  import {formatDate} from '@/utils/utils.js'
+  import {formatDate, md} from '@/utils/utils.js'
   import {categoryName} from '@/config/index.js'
-  var MarkIt = require('markdown-it')
   export default {
     computed: {
       category () {
@@ -49,7 +48,6 @@
         getArticleList(params).then(response => {
           let resData = response.data
           this.items = resData.items.map(item => {
-            let md = new MarkIt()
             item.tagItems = item.tags.split(';')
             item.brief_intro = md.render(item.brief_intro)
             return item

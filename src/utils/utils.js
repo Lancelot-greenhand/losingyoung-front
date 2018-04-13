@@ -1,6 +1,16 @@
 import axios from 'axios'
 import {parse as parseDate, getYear, getMonth, getDate} from 'date-fns'
-
+const hljs = require('highlight.js')
+const md = require('markdown-it')({
+  highlight (str, lang) {
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        return hljs.highlight(lang, str).value
+      } catch (__) {}
+    }
+    return ''
+  }
+})
 const getBrowser = function () {
   var Sys = {}
   var ua = navigator.userAgent.toLowerCase()
@@ -37,8 +47,10 @@ const formatDate = function (value) {
   let res = `${year}年${month}月${day}日`
   return res
 }
+
 export {
   getBrowser,
   getLoginStatus,
-  formatDate
+  formatDate,
+  md
 }

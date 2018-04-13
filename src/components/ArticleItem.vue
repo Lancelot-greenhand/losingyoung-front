@@ -16,21 +16,10 @@
 </template>
 <script>
   import {getArticleItem} from '@/service/getData.js'
-  import {formatDate} from '@/utils/utils.js'
+  import {formatDate, md} from '@/utils/utils.js'
   import lBreadcrumb from '@/components/breadcrumb/breadcrumb'
   import lBreadcrumbItem from '@/components/breadcrumb/breadcrumb-item'
   import {categoryName, categoryPath} from '@/config/index.js'
-  let hljs = require('highlight.js')
-  let md = require('markdown-it')({
-    highlight (str, lang) {
-      if (lang && hljs.getLanguage(lang)) {
-        try {
-          return hljs.highlight(lang, str).value
-        } catch (__) {}
-      }
-      return ''
-    }
-  })
   export default {
     components: {
       lBreadcrumb,
