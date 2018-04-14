@@ -36,6 +36,8 @@ const router = new Router({
           } else {
             next()
           }
+        }).catch(err => {
+          next()
         })
       },
       children: [{
