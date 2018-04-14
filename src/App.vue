@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view v-loading.fullscreen.lock="fullscreenLoading"></router-view>
+    <router-view v-loading.fullscreen="fullscreenLoading"></router-view>
   </div>
 </template>
 
